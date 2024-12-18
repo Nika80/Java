@@ -22,8 +22,15 @@ repositories {
 }
 
 dependencies {
+    compileOnly("org.projectlombok:lombok:1.18.36")
+    runtimeOnly("com.h2database:h2")
+    annotationProcessor("org.projectlombok:lombok:1.18.36")
+
 	implementation("org.springframework.boot:spring-boot-starter-web")
+	implementation("org.springframework.boot:spring-boot-starter-actuator")
+	implementation("org.springframework.boot:spring-boot-starter-data-jpa")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+    testImplementation("org.mockito:mockito-core:5.14.2")
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
 }
 

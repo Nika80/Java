@@ -17,11 +17,11 @@ cd ../subtractor
 docker build -t subtractor:latest .
 ```
 
-3. Запуск теста [EndToEndTest](./src/test/java/EndToEndTest.java)
+3. Запуск теста [CalculatorIntegrationTest](./src/test/java/CalculatorIntegrationTest.java)
 
 ## Микросервисы
 
-1. adder - складывает два числа (GET /{a}/{b})
-2. divider - делит два числа (GET /{a}/{b})
-3. multiplier - умножает два числа (GET /{a}/{b})
-4. subtractor - вычитает из одного числа другое (GET /{a}/{b})
+1. [adder](./adder) - складывает два числа (GET /{a}/{b}), работает на порту 8081
+2. [divider](./divider) - делит два числа (GET /{a}/{b}), работает на порту 8083
+3. [multiplier](./multiplier) - умножает два числа (GET /{a}/{b}), работает на порту 8084
+4. [subtractor](./subtractor) - вычитает из одного числа другое (GET /{a}/{b}), работает на порту 8082
